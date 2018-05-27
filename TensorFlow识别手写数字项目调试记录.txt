@@ -1,0 +1,10 @@
+1、
+module 'pandas.core.computation' has no attribute 'expressions'解决办法
+
+出现此等“module ‘pandas.core.computation’ has no attribute xxxx”问题，都是pandas和dask两个包的版本不相配造成的。所以，要注意dask和pandas的版本。
+
+查看自己的dask和pandas包的版本，如果，是这样的话那就得进行下面操作。 
+pandas 0.21 
+dask 0.15.3
+这两个包版本不匹配，要么，将pandas包的版本降为0.19版本的；要么，将dask包的版本升为0.17版本。
+这样就OK了！
